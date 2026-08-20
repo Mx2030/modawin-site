@@ -172,6 +172,9 @@ h2{font-family:var(--display); font-weight:600; font-size:clamp(2rem,4vw,3.1rem)
 .final .cta-row{justify-content:center}
 footer{border-top:1px solid var(--line); padding-block:32px; font-family:var(--mono); font-size:.72rem; color:var(--mute)}
 .foot-in{display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap; align-items:center}
+.foot-links{display:flex; gap:22px}
+.foot-links a{color:var(--sand-dim)}
+.foot-links a:hover{color:var(--amber)}
 footer a{color:var(--sand-dim); text-decoration:none}
 footer a:hover{color:var(--amber)}
 
@@ -200,6 +203,7 @@ footer a:hover{color:var(--amber)}
       <a href="#how">كيف يعمل</a>
       <a href="#features">المزايا</a>
       <a href="#privacy">الخصوصية</a>
+      <a href="support.html">الدعم</a>
     </div>
     <a class="btn btn-primary" href="#get">حمّل التطبيق</a>
   </div>
@@ -324,12 +328,13 @@ footer a:hover{color:var(--amber)}
         المعالجة والتخزين والتصدير كلها داخل جهازك، حتى لو قطعت الإنترنت تماماً.
       </p>
     </div>
-    <ul class="priv-list">
+    <ul class="priv-list" id="privlist">
       <li><b>لا رفع للتسجيلات</b> إلى أي خادم خارجي</li>
       <li><b>لا اشتراك سحابي</b> ولا حساب إلزامي</li>
       <li><b>لا مشاركة بيانات</b> مع طرف ثالث للتحليل أو التدريب</li>
       <li><b>لا حاجة لاتصال</b> — يعمل في وضع الطيران</li>
       <li><b>لا احتفاظ خفي</b> — الملفات تبقى ملكك وتُحذف بأمرك</li>
+      <li style="margin-top:8px"><a class="btn btn-ghost" href="privacy.html" style="padding:11px 20px">اقرأ سياسة الخصوصية كاملة ←</a></li>
     </ul>
   </div>
 </section>
@@ -353,6 +358,11 @@ footer a:hover{color:var(--amber)}
 <footer>
   <div class="wrap foot-in">
     <span>مدوّن — ModWin · <span class="ltr">im1.xyz</span></span>
+    <span class="foot-links">
+      <a href="privacy.html">سياسة الخصوصية</a>
+      <a href="support.html">الدعم</a>
+      <a href="#how">كيف يعمل</a>
+    </span>
     <span>© 2026 · جميع الحقوق محفوظة</span>
   </div>
 </footer>
