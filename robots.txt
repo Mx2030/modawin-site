@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://im1.xyz/sitemap.xml
