@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>مدوّن — محاضر اجتماعاتك تكتب نفسها</title>
-<meta name="description" content="مدوّن يحوّل تسجيلات اجتماعاتك إلى محضر عربي منظّم — تفريغ صوتي، تمييز متحدثين، تعريف حضور، وتصدير DOCX. كل المعالجة على جهازك، دون إنترنت.">
+<meta name="description" content="مدوّن يحوّل تسجيلات اجتماعاتك إلى محضر عربي منظّم — تفريغ صوتي، تمييز متحدثين، تعريف حضور، وتصدير DOCX. المعالجة كلها تجري داخل جهازك.">
 <meta property="og:title" content="مدوّن — محاضر اجتماعاتك تكتب نفسها">
-<meta property="og:description" content="ذكاء اجتماعات عربي يعمل بالكامل دون إنترنت.">
+<meta property="og:description" content="محاضر عربية منظّمة، تُصاغ حيث تبقى بياناتك: داخل جهازك.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://im1.xyz/">
 <meta property="og:locale" content="ar_SA">
@@ -73,9 +73,24 @@ nav{position:sticky; top:0; z-index:40; backdrop-filter:blur(14px);
 
 /* ---------- hero ---------- */
 header{padding-block:clamp(64px,10vw,124px) clamp(50px,7vw,88px); position:relative; overflow:hidden}
-.eyebrow{display:inline-flex; align-items:center; gap:10px; font-family:var(--mono); font-size:.7rem;
-  letter-spacing:.2em; color:var(--signal); border:1px solid rgba(91,217,138,.28); border-radius:999px;
-  padding:7px 15px; background:rgba(91,217,138,.05)}
+.eyebrow{display:inline-flex; align-items:center; gap:10px; font-family:var(--body); font-size:.82rem;
+  font-weight:400; letter-spacing:.01em; color:var(--signal); border:1px solid rgba(91,217,138,.28);
+  border-radius:999px; padding:8px 17px; background:rgba(91,217,138,.05)}
+.eyebrow .glyph{width:16px; height:16px; flex:0 0 16px; fill:none; stroke:var(--signal);
+  stroke-width:1.4; stroke-linecap:round; stroke-linejoin:round; opacity:.9}
+.eyebrow .glyph .slash{stroke-dasharray:26; stroke-dashoffset:26; animation:draw 1.1s .7s cubic-bezier(.4,.8,.3,1) forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+.localmark{display:inline-flex; align-items:center; gap:7px; color:var(--signal)}
+.localmark svg{width:13px; height:13px; fill:none; stroke:var(--signal); stroke-width:1.4; stroke-linejoin:round}
+
+/* the data boundary — a perimeter the content never crosses */
+.boundary{position:absolute; inset:-15px; border:1px dashed rgba(91,217,138,.22); border-radius:20px;
+  pointer-events:none; animation:breathe 7s ease-in-out infinite}
+.boundary-tag{position:absolute; top:-26px; inset-inline-start:14px; font-family:var(--mono);
+  font-size:.6rem; letter-spacing:.22em; color:rgba(91,217,138,.55); background:var(--ink);
+  padding-inline:8px; pointer-events:none}
+@keyframes breathe{0%,100%{opacity:.5; transform:scale(1)} 50%{opacity:.95; transform:scale(1.008)}}
+@media(max-width:960px){.boundary,.boundary-tag{display:none}}
 .dot{width:6px;height:6px;border-radius:50%;background:var(--signal);box-shadow:0 0 0 0 rgba(91,217,138,.6);animation:pulse 2.6s infinite}
 @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(91,217,138,.5)}70%{box-shadow:0 0 0 9px rgba(91,217,138,0)}100%{box-shadow:0 0 0 0 rgba(91,217,138,0)}}
 h1{font-family:var(--display); font-weight:700; font-size:clamp(2.9rem,7.4vw,5.6rem); line-height:1.1;
@@ -199,7 +214,7 @@ footer a:hover{color:var(--amber)}
 {"@context":"https://schema.org","@type":"SoftwareApplication","name":"مدوّن","alternateName":"ModWin",
 "applicationCategory":"BusinessApplication","operatingSystem":"iOS 17+, iPadOS 17+",
 "inLanguage":"ar","url":"https://im1.xyz/",
-"description":"ذكاء اجتماعات عربي يعمل دون إنترنت: تفريغ صوتي، تمييز متحدثين، تعريف حضور، ومحضر عربي منظّم قابل للتصدير DOCX."}
+"description":"ذكاء اجتماعات عربي: تفريغ صوتي، تمييز متحدثين، تعريف حضور، ومحضر عربي منظّم قابل للتصدير DOCX — بمعالجة تجري داخل الجهاز."}
 </script>
 </head>
 <body>
@@ -223,7 +238,13 @@ footer a:hover{color:var(--amber)}
 <header>
   <div class="wrap hero-grid">
     <div>
-      <span class="eyebrow rise d1"><i class="dot"></i> يعمل بالكامل دون إنترنت</span>
+      <span class="eyebrow rise d1">
+        <svg class="glyph" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M6.5 18.5h10a3.7 3.7 0 00.5-7.35 5.4 5.4 0 00-9.83-2.1A4.2 4.2 0 006.5 18.5z"/>
+          <path d="M3.6 3.6l16.8 16.8" class="slash"/>
+        </svg>
+        اجتماعاتك لا تغادر الغرفة
+      </span>
       <h1 class="rise d2">محاضر اجتماعاتك<br><span class="glow">تكتب نفسها.</span></h1>
       <p class="lede rise d3">
         ارفع تسجيل الاجتماع — صوتاً أو فيديو — ودع مدوّن يفرّغه بالعربية، يميّز المتحدثين،
@@ -241,6 +262,8 @@ footer a:hover{color:var(--amber)}
     </div>
 
     <div class="device rise d3" aria-hidden="true">
+      <span class="boundary" aria-hidden="true"></span>
+      <span class="boundary-tag">نطاق جهازك</span>
       <div class="device-bar">
         <span class="t ltr">meeting_2026-08-18.mp4</span>
         <span class="chipline"><i></i><i></i><i></i></span>
@@ -259,7 +282,10 @@ footer a:hover{color:var(--amber)}
       </div>
       <div class="device-foot">
         <span>٣ متحدثين · ٢ وجوه معرّفة</span>
-        <span><b>● offline</b> — لا اتصال بالإنترنت</span>
+        <span class="localmark">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="10.5" width="14" height="9" rx="2"/><path d="M8.5 10.5V8a3.5 3.5 0 017 0v2.5"/></svg>
+          تُعالَج داخل الجهاز
+        </span>
       </div>
     </div>
   </div>
