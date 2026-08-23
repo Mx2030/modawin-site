@@ -54,7 +54,7 @@ body{background:var(--void);color:var(--on-dark);font-family:var(--sans);font-we
 /* ── type scale ── */
 .eyebrow{font-family:var(--mono);font-size:.66rem;letter-spacing:.3em;text-transform:uppercase;
   display:block;margin-bottom:clamp(20px,3vw,34px);opacity:.85}
-h1{font-family:var(--sans);font-weight:800;font-size:clamp(3rem,10.5vw,8.2rem);line-height:.98;
+h1{font-family:var(--sans);font-weight:800;font-size:clamp(3.2rem,11.5vw,9rem);line-height:.96;
   letter-spacing:-.005em}
 h2{font-family:var(--sans);font-weight:700;font-size:clamp(2.2rem,6.6vw,5rem);line-height:1.08}
 h3{font-family:var(--sans);font-weight:500;font-size:clamp(1.15rem,2vw,1.5rem);line-height:1.35}
@@ -79,10 +79,7 @@ nav{position:fixed;inset-block-start:0;inset-inline:0;z-index:80;backdrop-filter
 /* ── hero ── */
 .hero{min-height:100svh;display:grid;align-content:center;padding-block:clamp(120px,18vh,190px) clamp(70px,12vh,120px);text-align:center}
 .hero .inner{display:grid;justify-items:center}
-.hero img.app{width:clamp(104px,14vw,148px);margin-bottom:clamp(28px,4vw,44px);
-  filter:drop-shadow(0 26px 42px rgba(255,90,95,.42)) drop-shadow(0 4px 10px rgba(255,138,76,.28));
-  animation:drift 8s ease-in-out infinite}
-@keyframes drift{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+.hero .eyebrow{margin-bottom:clamp(24px,3.5vw,38px)}
 .hero h1{max-width:14ch}
 .hero .lede{margin-inline:auto;text-align:center}
 .hero .cta{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin-top:clamp(34px,4vw,48px)}
@@ -177,7 +174,7 @@ footer{background:var(--void);padding:44px var(--pad);border-top:1px solid rgba(
 <section class="band dark hero">
   <span class="aura"></span>
   <div class="inner">
-    <img class="app" src="icon-512.png" alt="أيقونة تطبيق مدوّن" width="512" height="512">
+    <span class="eyebrow flame rv">مدوّن · ذكاء الاجتماعات العربي</span>
     <h1 class="rv" data-d="1">محاضر اجتماعاتك<br><span class="flame">تكتب نفسها.</span></h1>
     <p class="lede dim rv" data-d="2">ذكاء اجتماعات عربي يسمع، ويميّز، ويكتب — داخل جهازك وحده.</p>
     <div class="cta rv" data-d="3">
