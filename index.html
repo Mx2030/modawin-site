@@ -66,7 +66,7 @@ nav{position:fixed;inset-block-start:0;inset-inline:0;z-index:80;backdrop-filter
   background:rgba(8,7,10,.72);border-bottom:1px solid rgba(247,242,234,.08);transition:background .4s,border-color .4s}
 .nav-in{max-width:1160px;margin-inline:auto;padding:12px var(--pad);display:flex;align-items:center;justify-content:space-between;gap:18px}
 .brand{display:flex;align-items:center;gap:11px;text-decoration:none;color:inherit}
-.brand img{width:32px;height:32px;border-radius:9px}
+.brand img{width:30px;height:30px;filter:drop-shadow(0 4px 10px rgba(255,122,69,.4))}
 .brand b{font-family:var(--kufi);font-weight:600;font-size:1.18rem}
 .nav-links{display:flex;gap:30px}
 .nav-links a{color:var(--on-dark-dim);text-decoration:none;font-size:.88rem;transition:color .3s}
@@ -79,8 +79,9 @@ nav{position:fixed;inset-block-start:0;inset-inline:0;z-index:80;backdrop-filter
 /* ── hero ── */
 .hero{min-height:100svh;display:grid;align-content:center;padding-block:clamp(120px,18vh,190px) clamp(70px,12vh,120px);text-align:center}
 .hero .inner{display:grid;justify-items:center}
-.hero img.app{width:clamp(92px,13vw,132px);border-radius:24%;margin-bottom:clamp(28px,4vw,44px);
-  box-shadow:0 34px 70px -30px rgba(255,90,95,.6);animation:drift 8s ease-in-out infinite}
+.hero img.app{width:clamp(104px,14vw,148px);margin-bottom:clamp(28px,4vw,44px);
+  filter:drop-shadow(0 26px 42px rgba(255,90,95,.42)) drop-shadow(0 4px 10px rgba(255,138,76,.28));
+  animation:drift 8s ease-in-out infinite}
 @keyframes drift{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
 .hero h1{max-width:14ch}
 .hero .lede{margin-inline:auto;text-align:center}
